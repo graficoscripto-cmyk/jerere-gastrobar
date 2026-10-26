@@ -409,6 +409,48 @@
       font-size: 0.8rem;
       font-weight: 700;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      animation: floatBadgeJerere 4s ease-in-out infinite;
+    }
+    @keyframes floatBadgeJerere {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes jerereTicker {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+    .jerere-marquee {
+      background: var(--espresso);
+      color: #FAF4E8;
+      border-top: 1px solid rgba(227, 206, 157, 0.2);
+      border-bottom: 1px solid rgba(227, 206, 157, 0.2);
+      padding: 12px 0;
+      overflow: hidden;
+      user-select: none;
+    }
+    .jerere-marquee-track {
+      display: flex;
+      width: max-content;
+      animation: jerereTicker 26s linear infinite;
+    }
+    .jerere-marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 18px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: var(--bg-badge);
+    }
+    .jerere-marquee-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
     }
 
     .hero-float-badge svg {
@@ -1223,6 +1265,24 @@
         </div>
       </div>
     </section>
+
+    <!-- Faixa Caiçara em Movimento -->
+    <div class="jerere-marquee" aria-hidden="true">
+      <div class="jerere-marquee-track">
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Pastéis com Massa Artesanal</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Frutos do Mar &amp; Culinária Caiçara</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Lula Recheada &amp; Camarão Gratinado</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Chopp Trincando &amp; Caipicoco</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Vista Panorâmica das Ilhas de Paraty</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>BR-101 Km 564 · Praia Grande</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Pastéis com Massa Artesanal</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Frutos do Mar &amp; Culinária Caiçara</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Lula Recheada &amp; Camarão Gratinado</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Chopp Trincando &amp; Caipicoco</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>Vista Panorâmica das Ilhas de Paraty</span>
+        <span class="jerere-marquee-item"><span class="jerere-marquee-dot"></span>BR-101 Km 564 · Praia Grande</span>
+      </div>
+    </div>
 
     <!-- Cardápio / Especialidades Reais -->
     <section id="cardapio">
